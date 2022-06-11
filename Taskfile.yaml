@@ -1,0 +1,12 @@
+version: '3'
+
+
+tasks:
+  build:
+    cmds:
+      - go-bindata -pkg assets -o internal/assets/binary.go assets
+      - go build
+
+  clean:
+    cmds:
+      - go clean
